@@ -17,7 +17,7 @@
         "zlib": {
             "base": "base",
             "flags": [
-                "/IXDK\\include\\xbox",
+                "/IXDK\\9328\\include\\xbox",
                 "/DZ_PREFIX=1"
             ]
         }
