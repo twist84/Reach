@@ -1,7 +1,7 @@
 {
     "reach": {
         "progress_category": "game",
-        "mw_version": "X360/16.00.11886.00",
+        "xdk_path": "XDK/2.0.9328.0",
         "cflags": "base",
         "objects": {
             "360tag_debug/hs_function.cpp": "NonMatching"
@@ -9,7 +9,7 @@
     },
     "zlib": {
         "progress_category": "lib",
-        "mw_version": "2.0.9328.0",
+        "xdk_path": "XDK/2.0.9328.0",
         "cflags": "zlib",
         "objects": {
             "zlib/deflate.c": "NonMatching",

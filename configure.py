@@ -227,7 +227,7 @@ config.asflags = [
 ]
 config.ldflags = ldflags
 
-config.linker_version = "X360/16.00.11886.00"
+config.linker_version = "XDK/2.0.9328.0"
 
 config.shift_jis = False
 config.progress_all = False

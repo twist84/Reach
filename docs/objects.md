@@ -7,7 +7,7 @@ This file contains the object configurations for your project. It is left blank 
 ```json
     "main": {
         "progress_category": "your-category",
-        "mw_version": "X360/16.00.11886.00",
+        "xdk_path": "XDK/2.0.9328.0",
         "cflags": "base",
         "objects": {
             "path/to/file1.cpp": "MISSING",
@@ -18,7 +18,7 @@ This file contains the object configurations for your project. It is left blank 
 
 - `"main"` The type of objects being configured here. The example above is for `main`, but you can add others as you see fit for your project (`engine`, `xdk`, etc).
 - `"progress_category"` The category from `config.json` that this object type will count towards.
-- `"mw_version"` The X360 compiler version.
+- `"xdk_path"` The X360 SDK path.
 - `"cflags"` The compiler flags to use for this object type.
 - `"objects"` The different objects that make up this object type.
 

@@ -59,7 +59,7 @@ class Object:
             "extra_cflags": [],
             "extra_clang_flags": [],
             "lib": None,
-            "mw_version": None,
+            "xdk_path": None,
             "progress_category": None,
             "scratch_preset_id": None,
             "shift_jis": None,
@@ -91,7 +91,7 @@ class Object:
         set_default("asflags", config.asflags)
         set_default("asm_dir", config.asm_dir)
         set_default("extab_padding", None)
-        set_default("mw_version", config.linker_version)
+        set_default("xdk_path", config.linker_version)
         set_default("scratch_preset_id", config.scratch_preset_id)
         set_default("shift_jis", config.shift_jis)
         set_default("src_dir", config.src_dir)
@@ -457,7 +457,7 @@ def generate_build_ninja(
     # n.variable("ldflags", make_flags_str(config.ldflags))
     # if config.linker_version is None:
     #     sys.exit("ProjectConfig.linker_version missing")
-    n.variable("mw_version", Path(config.linker_version))
+    n.variable("xdk_path", Path(config.linker_version))
     n.variable("objdiff_report_args", make_flags_str(config.progress_report_args))
     n.newline()
 
@@ -639,12 +639,12 @@ def generate_build_ninja(
     ###
     # Build rules
     ###
-    compiler_path = compilers / "$mw_version"
+    compiler_path = Path("$xdk_path")
 
     transform_dep: Optional[Path] = None
 
     # MWCC
-    mwcc = compiler_path / "cl.exe"
+    mwcc = compiler_path / "bin" / "win32" / "cl.exe"
     mwcc_cmd = f"{wrapper_cmd}{mwcc} $cflags"
     mwcc_implicit: List[Optional[Path]] = [compilers_implicit or mwcc, wrapper_implicit]
 
@@ -700,7 +700,7 @@ def generate_build_ninja(
     # n.newline()
 
     # MSVC
-    msvc = compiler_path / "cl.exe"
+    msvc = compiler_path / "bin" / "win32" / "cl.exe"
     msvc_cmd = f"{wrapper_cmd}{msvc} $cflags /showIncludes /Fo$out $in"
     if transform_dep is not None:
         msvc_cmd = (
@@ -904,7 +904,6 @@ def generate_build_ninja(
     link_outputs: List[Path] = []
     if build_config:
         link_steps: List[LinkStep] = []
-        used_compiler_versions: Set[str] = set()
         source_inputs: List[Path] = []
         source_added: Set[Path] = set()
 
@@ -932,14 +931,13 @@ def generate_build_ninja(
 
             all_cflags = cflags + extra_cflags
             cflags_str = make_flags_str(all_cflags)
-            used_compiler_versions.add(obj.options["mw_version"])
 
             # Add MSVC build rule
             lib_name = obj.options["lib"]
             build_rule = "msvc"
             build_implcit = mwcc_implicit
             variables = {
-                "mw_version": Path(obj.options["mw_version"]),
+                "xdk_path": Path(obj.options["xdk_path"]),
                 "cflags": cflags_str,
                 "basedir": os.path.dirname(obj.src_obj_path),
                 "basefile": obj.src_obj_path.with_suffix(""),
@@ -1095,14 +1093,13 @@ def generate_build_ninja(
                 link_steps.append(module_link_step)
         n.newline()
 
-        # Check if all compiler versions exist
-        for mw_version in used_compiler_versions:
-            msvc_path = compilers / mw_version / "cl.exe"
-            if config.compilers_path and not os.path.exists(msvc_path):
-                sys.exit(f"Compiler {msvc_path} does not exist")
+        # Check if compiler exists
+        msvc_path = compiler_path / "bin" / "win32" / "cl.exe"
+        if config.compilers_path and not os.path.exists(msvc_path):
+            sys.exit(f"Compiler {msvc_path} does not exist")
 
         # Check if linker exists
-        msvc_path = compilers / str(config.linker_version) / "link.exe"
+        msvc_path = compiler_path / "bin" / "win32" / "link.exe"
         if config.compilers_path and not os.path.exists(msvc_path):
             sys.exit(f"Linker {msvc_path} does not exist")
 
@@ -1581,11 +1578,11 @@ def generate_objdiff_config(
                 elif value == "nodeferred":
                     reverse_fn_order = False
 
-        compiler_version = COMPILER_MAP.get(obj.options["mw_version"])
+        compiler_version = COMPILER_MAP.get(obj.options["xdk_path"])
         if compiler_version is None:
             pass
             # TODO: add this back in when we actually have a scratch config for Xbox
-            # print(f"Missing scratch compiler mapping for {obj.options['mw_version']}")
+            # print(f"Missing scratch compiler mapping for {obj.options['xdk_path']}")
         else:
             cflags_str = make_flags_str(all_cflags)
             unit_config["scratch"] = {
