@@ -26,6 +26,10 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: Reach-Build
 
+      # Visual Studio 2010
+      - name: Build
+        run: choco install vsexpress2010
+
       # Copy Reach-Build/orig -> ./orig
       - name: Copy Files
         run: xcopy /E /I /Y Reach-Build\orig orig
