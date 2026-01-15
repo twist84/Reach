@@ -28,6 +28,8 @@ jobs:
       # Clone the current repo
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
 
       # Clone the secondary repo
       - name: Checkout build
