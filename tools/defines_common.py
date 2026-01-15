@@ -1,7 +1,7 @@
 # Game versions
 DEFAULT_VERSION = 0
 VERSIONS = [
-    "tag_debug_untracked_jul_11_2011",  # 0
+    "TAG_DEBUG_UNTRACKED_JUL_11_2011",  # 0
 ]
 
 # Include paths
