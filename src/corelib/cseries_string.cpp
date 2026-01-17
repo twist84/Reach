@@ -67,31 +67,31 @@ t_type int_min3(t_type const & a, t_type const & b, t_type const & c)
 
 bool ascii_islower(long character_code)
 {
-    bool result = character_code >= 'a' && character_code <= 'z' ? true : false;
+    bool result = bool(character_code >= 'a' && character_code <= 'z');
     return result;
 }
 
 bool ascii_isupper(long character_code)
 {
-    bool result = character_code >= 'A' && character_code <= 'Z' ? true : false;
+    bool result = bool(character_code >= 'A' && character_code <= 'Z');
     return result;
 }
 
 bool ascii_isdigit(long character_code)
 {
-    bool result = character_code >= '0' && character_code <= '9' ? true : false;
+    bool result = bool(character_code >= '0' && character_code <= '9');
     return result;
 }
 
 bool ascii_isalnum(long character_code)
 {
-    bool result = (ascii_isupper(character_code) || ascii_islower(character_code) || ascii_isdigit(character_code)) ? true : false;
+    bool result = bool(ascii_isupper(character_code) || ascii_islower(character_code) || ascii_isdigit(character_code));
     return result;
 }
 
 bool ascii_isspace(long character_code)
 {
-    bool result = character_code >= '\t' && character_code <= '\r' || character_code == ' ' ? true : false;
+    bool result = bool(character_code >= '\t' && character_code <= '\r' || character_code == ' ');
     return result;
 }
 
