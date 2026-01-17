@@ -10374,7 +10374,7 @@ source/omaha/ai/path.cpp:
 	.data       start:0x853374E0 end:0x85337EB0
 	.data       start:0x86C3AED8 end:0x86C3D784 rename:.bss
 
-ailib/ai_utilities.cpp:
+source/omaha/ai/ai_utilities.cpp:
 	.rdata      start:0x82336C70 end:0x823378A8
 	.pdata      start:0x825A0010 end:0x825A0088
 	.pdata      start:0x82621760 end:0x82621778
@@ -22196,7 +22196,7 @@ source/omaha/eslib/inflate.cpp:
 	.text       start:0x84BE2258 end:0x84BE6E80
 	.text       start:0x84C1B500 end:0x84C1C580
 
-source/omaha/eslib/stateSwitch.cpp:
+source/omaha/eslib/stateswitch.cpp:
 	.rdata      start:0x824F9148 end:0x824F9220
 	.pdata      start:0x82606870 end:0x826068A8
 	.text       start:0x84BEC858 end:0x84BECD20
