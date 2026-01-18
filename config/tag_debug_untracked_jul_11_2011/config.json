@@ -18,7 +18,13 @@
     "asflags": [],
     "ldflags": [],
     "cflags": {
+        "decomp": {
+            "flags": [
+                "/DNOT_IMPLEMENTED=__assume(0)"
+            ]
+        },
         "base": {
+            "base": "decomp",
             "flags": [
                 "/IXDK\\9328\\include\\xbox",
                 "/nologo",
