@@ -2,7 +2,7 @@
     "root": {
         "progress_category": "root",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/root/headers.cpp": "NonMatching",
             "source/omaha/editor/editor_render_stubs.cpp": "NonMatching",
@@ -14,7 +14,7 @@
     "ailib": {
         "progress_category": "ailib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/omaha/ai/activities.cpp": "NonMatching",
             "source/omaha/ai/actor_combat.cpp": "NonMatching",
@@ -120,7 +120,7 @@
     "blamlib": {
         "progress_category": "blamlib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/blamlib/aim_assist_encoding.cpp": "NonMatching",
             "source/blamlib/animation_debug_director.cpp": "NonMatching",
@@ -929,7 +929,7 @@
     "eslib": {
         "progress_category": "eslib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/omaha/eslib/deflate.cpp": "NonMatching",
             "source/omaha/eslib/inflate.cpp": "NonMatching",
@@ -939,7 +939,7 @@
     "graphicslib": {
         "progress_category": "graphicslib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/graphicslib/camera_space_cubemaps.cpp": "NonMatching",
             "source/graphicslib/command_buffer_cache.cpp": "NonMatching",
@@ -1092,7 +1092,7 @@
     "interfacelib": {
         "progress_category": "interfacelib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/interfacelib/active_challenge_details_list_data_component.cpp": "NonMatching",
             "source/interfacelib/active_challenges_list_data_component.cpp": "NonMatching",
@@ -1636,7 +1636,7 @@
     "networkinglib": {
         "progress_category": "networkinglib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/networkinglib/individual_field_preview_data.cpp": "NonMatching",
             "source/networkinglib/life_cycle_state_handler.cpp": "NonMatching",
@@ -1892,7 +1892,7 @@
     "objectslib": {
         "progress_category": "objectslib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/objectslib/vehicle_tank_utilities.cpp": "NonMatching",
             "source/objectslib/vehicle_type_boat.cpp": "NonMatching",
@@ -2026,7 +2026,7 @@
     "baselib": {
         "progress_category": "baselib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/baselib/event_constants.cpp": "NonMatching",
             "source/baselib/file_interface.cpp": "NonMatching",
@@ -2111,7 +2111,7 @@
     "corelib": {
         "progress_category": "corelib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/core/corelib/config/version.cpp": "NonMatching",
             "source/core/corelib/cseries/asserts/assert_handler.cpp": "NonMatching",
@@ -2125,7 +2125,7 @@
     "threadlib": {
         "progress_category": "threadlib",
         "xdk_path": "XDK/9328",
-        "cflags": "base",
+        "cflags": "blam",
         "objects": {
             "source/foundation/threadlib/async/async_profile.cpp": "NonMatching",
             "source/foundation/threadlib/async/async_setup.cpp": "NonMatching",

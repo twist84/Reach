@@ -20,6 +20,7 @@
     "cflags": {
         "decomp": {
             "flags": [
+                "/Isrc",
                 "/DNOT_IMPLEMENTED=__assume(0)"
             ]
         },
@@ -35,6 +36,12 @@
                 "/D_CONSOLE",
                 "/D_MBCS",
                 "/GF"
+            ]
+        },
+        "blam": {
+            "base": "base",
+            "flags": [
+                "/Isrc\\source"
             ]
         },
         "zlib": {
