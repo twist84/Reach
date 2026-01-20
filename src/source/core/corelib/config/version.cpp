@@ -10,14 +10,6 @@
 
 /* ---------- definitions */
 
-/* ---------- prototypes */
-
-/* ---------- globals */
-
-char const *const k_build_identifier_delimiter = "__"; // "?k_build_identifier_delimiter@@3PBDB"
-
-static s_project_version g_project_version;
-
 struct s_version_globals
 {
     bool g_version_is_tracked_build;
@@ -25,6 +17,14 @@ struct s_version_globals
     char build_identifier_string[0x200];
     char full_string[0x200];
 };
+
+/* ---------- prototypes */
+
+/* ---------- globals */
+
+char const *const k_build_identifier_delimiter = "__"; // "?k_build_identifier_delimiter@@3PBDB"
+
+static s_project_version g_project_version;
 static s_version_globals version_globals =
 {
     /*.g_version_is_tracked_build=*/false,
