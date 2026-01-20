@@ -25,6 +25,10 @@ extern "C"
     int csmemcmp(const void* p1, const void* p2, size_t size);
 }
 
+/* ---------- globals */
+
+/* ---------- public code */
+
 inline bool pointer_is_aligned(void const *, long)
 {
     mangled_ppc("?pointer_is_aligned@@YA_NPBXJ@Z");
@@ -53,7 +57,7 @@ inline void * pointer_from_address(unsigned long)
     NOT_IMPLEMENTED;
 };
 
-inline void * offset_pointer(void *, long)
+inline void * offset_pointer(void * pointer, long offset)
 {
     mangled_ppc("?offset_pointer@@YAPAXPAXJ@Z");
 
@@ -66,9 +70,5 @@ inline void const * offset_pointer(const void* pointer, long offset)
 
     return pointer_from_address(address_from_pointer(pointer) + offset);
 };
-
-/* ---------- globals */
-
-/* ---------- public code */
 
 #endif // __CSERIES_MEMORY_H__

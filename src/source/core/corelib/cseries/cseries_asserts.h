@@ -12,11 +12,18 @@
 
 /* ---------- definitions */
 
+struct s_slim_assert_info;
+class c_assert_string;
+
 /* ---------- prototypes */
 
+extern long register_tracked_assert(char const * arg1, long arg2);
+extern void log_tracked_assert(long arg1);
 extern bool assert_handle(char const * expression, char const * file, long line);
-extern bool assert_is_debugger_present(void);
 extern void assert_halt(void);
+extern bool assert_is_debugger_present(void);
+extern void assert_handle_slim_constant(s_slim_assert_info const * info);
+extern void assert_handle_slim_dynamic(s_slim_assert_info const * info, c_assert_string const & arg2);
 
 /* ---------- globals */
 

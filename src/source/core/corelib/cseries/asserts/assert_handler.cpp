@@ -52,5 +52,3 @@ c_assert_handler * c_assert_handler_hook::get_handler(void)
 /* ---------- private code */
 
 /* ---------- reverse engineering */
-
-// private: static class c_assert_handler *c_assert_handler_hook::g_assert_handler; // "?g_assert_handler@c_assert_handler_hook@@0PAVc_assert_handler@@A"
