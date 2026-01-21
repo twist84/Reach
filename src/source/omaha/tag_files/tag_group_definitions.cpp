@@ -1,6 +1,8 @@
+#define __FILE_TAG_DEBUG_UNTRACKED_JUL_11_2011__ "C:\\SD\\Reach\\Publishing\\Main\\shared\\engine\\source\\omaha\\tag_files\\tag_group_definitions.cpp"
 /* ---------- headers */
 
 #include "omaha\tag_files\tag_group_definitions.h"
+#include "core\corelib\cseries\cseries_asserts.h"
 
 /* ---------- constants */
 
@@ -12,162 +14,6 @@
 
 /* ---------- public code */
 
-/* ---------- private code */
-
-/* ---------- reverse engineering */
-
-// struct s_tag_struct_definition g_null_block_struct_definition; // "?g_null_block_struct_definition@@3Us_tag_struct_definition@@A"
-// struct s_tag_block_definition g_null_block; // "?g_null_block@@3Us_tag_block_definition@@A"
-// struct s_tag_reference_definition g_non_traversed_reference_definition; // "?g_non_traversed_reference_definition@@3Us_tag_reference_definition@@A"
-// struct s_block_index_custom_search_definition g_null_custom_search_block_reference; // "?g_null_custom_search_block_reference@@3Us_block_index_custom_search_definition@@A"
-// char const **g_tag_reference_definition_flags_strings; // "?g_tag_reference_definition_flags_strings@@3PAPBDA"
-// struct s_string_list_definition g_tag_reference_definition_flags; // "?g_tag_reference_definition_flags@@3Us_string_list_definition@@A"
-// class c_legacy_tag_struct_vtable_shim g_empty_tag_struct_legacy_vtable_shim; // "?g_empty_tag_struct_legacy_vtable_shim@@3Vc_legacy_tag_struct_vtable_shim@@A"
-// class c_tag_memory_attributes const k_read_only_tag_memory_attributes; // "?k_read_only_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
-// class c_tag_memory_attributes const k_read_write_tag_memory_attributes; // "?k_read_write_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
-// class c_tag_memory_attributes const k_physical_read_only_tag_memory_attributes; // "?k_physical_read_only_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
-// class c_tag_memory_attributes const k_physical_read_write_tag_memory_attributes; // "?k_physical_read_write_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
-// class c_tag_memory_attributes const k_physical_write_combined_tag_memory_attributes; // "?k_physical_write_combined_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
-
-// bool tag_persistent_identifiers_equal(struct s_tag_persistent_identifier const &, struct s_tag_persistent_identifier const &);
-// bool resolve_block_reference_to_null(long, struct s_tag_field const *, void const *, void const *, __int64, struct s_tag_block_resolve_custom_result *);
-// bool block_definition_can_match_nothing(struct s_tag_field const *, struct s_tag_block_definition const *);
-// struct s_tag_struct_definition declare_legacy_field_set(struct s_tag_field const *, char const *, long, long, long, bool (*)(unsigned long, struct s_tag_field const *, long, long, void *, struct s_tag_field const *, long, long, void *));
-// struct s_tag_struct_definition * get_mutable_legacy_ancestor_field_set(struct s_tag_struct_definition *);
-// struct s_tag_struct_definition const * get_legacy_field_set(struct s_tag_struct_definition const *, long);
-// void tag_persistent_identifier_create(struct s_tag_persistent_identifier *);
-// public: struct s_tag_field const * s_tag_struct_definition::get_fields(void) const;
-// public: void s_tag_struct_definition::set_fields(struct s_tag_field const *);
-// public: bool s_tag_struct_definition::owns_field(struct s_tag_field const *) const;
-// public: long s_tag_struct_definition::get_struct_size(void) const;
-// public: long s_tag_struct_definition::get_cache_file_struct_size(void) const;
-// public: long s_tag_struct_definition::get_alignment_bits(void) const;
-// public: char const * s_tag_struct_definition::get_size_string(void) const;
-// public: unsigned long s_tag_struct_definition::get_runtime_flags(void) const;
-// public: bool s_tag_struct_definition::is_built_from_disk(void) const;
-// public: struct byte_swap_definition * s_tag_struct_definition::get_byte_swap_definition(void) const;
-// public: __int64 s_tag_struct_definition::get_exploded_struct_size(void) const;
-// public: class c_tag_struct_vtable_interface const * s_tag_struct_definition::get_struct_vtable(void) const;
-// public: void const * s_tag_struct_definition::get_type_key(void) const;
-// public: struct s_tag_persistent_identifier const & s_tag_struct_definition::get_persistent_identifier(void) const;
-// public: struct s_tag_struct_definition const * s_tag_struct_definition::get_ancestor_definition(void) const;
-// public: struct s_tag_struct_definition * s_tag_struct_definition::get_ancestor_definition_mutable(void);
-// public: struct s_tag_struct_definition * s_tag_struct_definition::get_mutable_ancestor_definition(void);
-// public: struct s_tag_struct_definition const * s_tag_struct_definition::get_descendent_definition(void) const;
-// public: char const * s_tag_struct_definition::get_pretty_name(void) const;
-// public: char const * s_tag_struct_definition::get_name(void) const;
-// public: void s_tag_struct_definition::set_descendent_definition(struct s_tag_struct_definition *);
-// public: enum e_tag_memory_allocation_type s_tag_struct_definition::get_preferred_memory_type(void);
-// public: class c_tag_memory_attributes const & s_tag_struct_definition::get_memory_attributes(void) const;
-// public: void s_tag_struct_definition::validate_vtable(void);
-// public: long s_tag_block_definition::get_element_size(void) const;
-// public: char const * s_tag_block_definition::get_size_string(void) const;
-// public: struct s_tag_field const * s_tag_block_definition::get_fields(void) const;
-// public: long s_tag_block_definition::get_cache_file_element_size(void) const;
-// public: unsigned long s_tag_block_definition::get_runtime_flags(void) const;
-// public: bool s_tag_block_definition::does_not_exist_in_cache_build(void) const;
-// public: long s_tag_block_definition::get_alignment_bits(void) const;
-// public: struct byte_swap_definition * s_tag_block_definition::get_byte_swap_definition(void) const;
-// public: __int64 s_tag_block_definition::get_exploded_maximum_block_size(void) const;
-// public: class c_tag_struct_vtable_interface const * s_tag_block_definition::get_struct_vtable(void) const;
-// public: void const * s_tag_block_definition::get_type_key(void) const;
-// public: struct s_tag_persistent_identifier const & s_tag_block_definition::get_persistent_identifier(void) const;
-// public: char const * s_tag_block_definition::get_pretty_name(void) const;
-// public: char const * s_tag_block_definition::get_elements_name(void) const;
-// public: char const * s_tag_block_definition::get_block_name(void) const;
-// public: unsigned long s_tag_block_definition::get_allocation_flags(void) const;
-// public: enum e_tag_memory_allocation_type s_tag_block_definition::get_preferred_memory_type(void);
-// public: class c_tag_memory_attributes const & s_tag_block_definition::get_memory_attributes(void) const;
-// public: struct s_tag_field const * s_tag_array_definition::get_fields(void) const;
-// public: long s_tag_array_definition::get_element_size(void) const;
-// public: long s_tag_array_definition::get_cache_file_element_size(void) const;
-// public: unsigned long s_tag_array_definition::get_runtime_flags(void) const;
-// public: class c_tag_struct_vtable_interface const * s_tag_array_definition::get_struct_vtable(void) const;
-// public: void const * s_tag_array_definition::get_type_key(void) const;
-// public: struct s_tag_persistent_identifier const & s_tag_array_definition::get_persistent_identifier(void) const;
-// public: char const * s_tag_array_definition::get_pretty_name(void) const;
-// public: char const * s_tag_array_definition::get_elements_name(void) const;
-// public: char const * s_tag_array_definition::get_array_name(void) const;
-// public: enum e_tag_memory_allocation_type s_tag_array_definition::get_preferred_memory_type(void);
-// public: class c_tag_memory_attributes const & s_tag_array_definition::get_memory_attributes(void) const;
-// public: struct s_tag_field const * s_tag_resource_definition::get_fields(void) const;
-// public: long s_tag_resource_definition::get_alignment_bits(void) const;
-// public: long s_tag_resource_definition::get_resource_size(void) const;
-// public: long s_tag_resource_definition::get_cache_file_resource_size(void) const;
-// public: unsigned long s_tag_resource_definition::get_runtime_flags(void) const;
-// public: class c_tag_struct_vtable_interface const * s_tag_resource_definition::get_struct_vtable(void) const;
-// public: void const * s_tag_resource_definition::get_type_key(void) const;
-// public: long s_tag_resource_definition::get_pageable_alignment_bits(void) const;
-// public: long s_tag_resource_definition::get_optional_alignment_bits(void) const;
-// public: struct s_tag_persistent_identifier const & s_tag_resource_definition::get_persistent_identifier(void) const;
-// public: char const * s_tag_resource_definition::get_pretty_name(void) const;
-// public: char const * s_tag_resource_definition::get_resource_name(void) const;
-// public: char const * s_tag_resource_definition::get_elements_name(void) const;
-// public: bool s_tag_resource_definition::required(void) const;
-// public: bool s_tag_resource_definition::not_required_immediately(void) const;
-// public: bool s_tag_resource_definition::optional(void) const;
-// public: bool s_tag_resource_definition::streamed(void) const;
-// public: void s_tag_resource_definition::validate_vtable(void);
-// public: unsigned long s_tag_struct_definition::get_legacy_struct_tag(void) const;
-// public: long s_tag_struct_definition::get_legacy_version(void) const;
-// public: long s_tag_block_definition::get_legacy_version(void) const;
-// public: long s_tag_array_definition::get_legacy_version(void) const;
-// public: unsigned long s_tag_data_definition::get_allocation_flags(void) const;
-// public: class c_tag_memory_attributes s_tag_data_definition::get_memory_attributes(void) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_byte_swap_proc(void) const;
-// public: virtual void c_legacy_tag_struct_vtable_shim::byte_swap_block_proc(void *) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_postprocess_proc(void) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::postprocess_thunk(long, void *, bool) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_format_proc(void) const;
-// public: virtual char * c_legacy_tag_struct_vtable_shim::format_thunk(long, __int64, struct s_tag_block *, long, char *, long) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_delete_proc(void) const;
-// public: virtual void c_legacy_tag_struct_vtable_shim::on_delete_thunk(void *) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_new_proc(void) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::on_new_thunk(void *) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_copy_proc(void) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::on_copy_thunk(void const *, void *) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_write_to_cache_file_proc(void) const;
-// public: virtual void c_legacy_tag_struct_vtable_shim::write_to_cache_file_thunk(long, struct s_tag_block *, struct s_cache_file_builder_stream_context const *, void **, void **) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_definition(void) const;
-// public: virtual struct s_tag_struct_definition * c_legacy_tag_struct_vtable_shim::get_fixup_source_definition_thunk(void) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_proc(void) const;
-// public: virtual bool c_legacy_tag_struct_vtable_shim::fixup_old_struct_thunk(class c_basic_buffer<void> &, struct s_tag_struct_definition const *, class c_basic_buffer<void> &, struct s_tag_struct_definition const *, class c_tag_allocator *, bool) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_postprocess_proc(void) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::postprocess_tag_thunk(long, bool) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_missing_tag_proc(void) const;
-// public: virtual void c_legacy_tag_group_vtable_shim::handle_missing_tag_thunk(unsigned long, char const *, unsigned long, unsigned long, char const *, long *) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_on_save_tag_proc(void) const;
-// public: virtual void c_legacy_tag_group_vtable_shim::on_save_tag_thunk(long) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_write_to_cache_file_proc(void) const;
-// public: virtual void c_legacy_tag_group_vtable_shim::write_tag_to_cache_file_thunk(long, unsigned long, class c_cache_file_scratch_allocator *, class c_cache_file_resource_library *, class c_cache_file_tracer *, void **, void **) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_valid_alternate_streams(void) const;
-// public: virtual struct s_tag_group_stream_list * c_legacy_tag_group_vtable_shim::get_alterante_streams_thunk(void) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_should_load_tag_stream_proc(void) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::should_load_tag_stream_thunk(unsigned long, bool) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_xsync_runtime_platforms(void) const;
-// public: virtual unsigned long c_legacy_tag_group_vtable_shim::get_xsync_runtime_platforms_thunk(void) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::has_postprocess_on_sync_proc(void) const;
-// public: virtual bool c_legacy_tag_group_vtable_shim::postprocess_on_sync_thunk(long, enum e_runtime_platform_type, class c_cache_file_global_tag_registry *, bool) const;
-// public: unsigned long s_tag_group::get_xsync_version(void) const;
-// public: long s_tag_group::get_non_temporary_group_index(void) const;
-// public: void s_tag_group::set_non_temporary_group_index(long);
-// public: bool s_tag_group::valid_for_reload_stage(enum e_tag_reload_stage) const;
-// public: void s_tag_group::validate_vtable(void);
-// public: enum e_tag_memory_allocation_type c_tag_memory_attributes::get_memory_type(void) const;
-// public: unsigned long c_tag_memory_attributes::get_usage_flags(void) const;
-// public: void c_tag_memory_attributes::set_attributes(enum e_tag_memory_allocation_type, unsigned long);
-// public: bool c_tag_memory_attributes::operator==(class c_tag_memory_attributes const &) const;
-// public: bool c_tag_memory_attributes::operator!=(class c_tag_memory_attributes const &) const;
-// class c_tag_memory_attributes make_tag_memory_attributes(enum e_tag_memory_allocation_type, unsigned long);
-// public: bool c_flags_no_init<enum e_tag_memory_usage_bit, unsigned long, 6, struct s_default_enum_string_resolver>::operator==(class c_flags_no_init<enum e_tag_memory_usage_bit, unsigned long, 6, struct s_default_enum_string_resolver> const &) const;
-// unsigned long const * array_begin<unsigned long const, 4>(unsigned long const (&)[4]);
-// unsigned long const * array_end<unsigned long const, 4>(unsigned long const (&)[4]);
-// bool std::equal<unsigned long const *, unsigned long const *>(unsigned long const *, unsigned long const *, unsigned long const *);
-// unsigned long const * std::_Checked_base<unsigned long const *>(unsigned long const *&);
-// struct std::random_access_iterator_tag std::_Iter_random<unsigned long const *, unsigned long const *>(unsigned long const *const &, unsigned long const *const &);
-// bool std::_Equal<unsigned long const *, unsigned long const *>(unsigned long const *, unsigned long const *, unsigned long const *, struct std::random_access_iterator_tag, struct std::_Range_checked_iterator_tag);
-// unsigned long const * std::_Checked_base<unsigned long const *>(unsigned long const *&, struct std::_Unchanged_checked_iterator_base_type_tag);
-// bool std::_Equal<unsigned long const *, unsigned long const *, struct std::forward_iterator_tag>(unsigned long const *, unsigned long const *, unsigned long const *, struct std::forward_iterator_tag, struct std::_Range_checked_iterator_tag);
 
 //bool tag_persistent_identifiers_equal(struct s_tag_persistent_identifier const &, struct s_tag_persistent_identifier const &)
 //{
@@ -594,95 +440,176 @@
 //    mangled_ppc("?get_memory_attributes@s_tag_data_definition@@QBA?AVc_tag_memory_attributes@@XZ");
 //};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_byte_swap_proc(void) const
-//{
-//    mangled_ppc("?has_byte_swap_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+bool c_legacy_tag_struct_vtable_shim::has_byte_swap_proc(void) const
+{
+    mangled_ppc("?has_byte_swap_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(705, m_struct_vtable);
 
-//public: virtual void c_legacy_tag_struct_vtable_shim::byte_swap_block_proc(void *) const
-//{
-//    mangled_ppc("?byte_swap_block_proc@c_legacy_tag_struct_vtable_shim@@UBAXPAX@Z");
-//};
+    return m_struct_vtable->byte_swap_proc != NULL;
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_postprocess_proc(void) const
-//{
-//    mangled_ppc("?has_postprocess_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+void c_legacy_tag_struct_vtable_shim::byte_swap_block_proc(void * arg1) const
+{
+    mangled_ppc("?byte_swap_block_proc@c_legacy_tag_struct_vtable_shim@@UBAXPAX@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(712, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(713, m_struct_vtable->byte_swap_proc);
+    
+    m_struct_vtable->byte_swap_proc(arg1);
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::postprocess_thunk(long, void *, bool) const
-//{
-//    mangled_ppc("?postprocess_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NJPAX_N@Z");
-//};
+bool c_legacy_tag_struct_vtable_shim::has_postprocess_proc(void) const
+{
+    mangled_ppc("?has_postprocess_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(720, m_struct_vtable);
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_format_proc(void) const
-//{
-//    mangled_ppc("?has_format_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+    return m_struct_vtable->postprocess_proc != NULL;
+};
 
-//public: virtual char * c_legacy_tag_struct_vtable_shim::format_thunk(long, __int64, struct s_tag_block *, long, char *, long) const
-//{
-//    mangled_ppc("?format_thunk@c_legacy_tag_struct_vtable_shim@@UBAPADJ_JPAUs_tag_block@@JPADJ@Z");
-//};
+bool c_legacy_tag_struct_vtable_shim::postprocess_thunk(long arg1, void * arg2, bool arg3) const
+{
+    mangled_ppc("?postprocess_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NJPAX_N@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(729, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(730, m_struct_vtable->postprocess_proc!=NULL);
+    
+    return m_struct_vtable->postprocess_proc(arg1, arg2, arg3);
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_delete_proc(void) const
-//{
-//    mangled_ppc("?has_on_delete_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+bool c_legacy_tag_struct_vtable_shim::has_format_proc(void) const
+{
+    mangled_ppc("?has_format_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(737, m_struct_vtable);
 
-//public: virtual void c_legacy_tag_struct_vtable_shim::on_delete_thunk(void *) const
-//{
-//    mangled_ppc("?on_delete_thunk@c_legacy_tag_struct_vtable_shim@@UBAXPAX@Z");
-//};
+    return m_struct_vtable->format_proc != NULL;
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_new_proc(void) const
-//{
-//    mangled_ppc("?has_on_new_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+char * c_legacy_tag_struct_vtable_shim::format_thunk(long arg1, __int64 arg2, s_tag_block * arg3, long arg4, char * arg5, long arg6) const
+{
+    mangled_ppc("?format_thunk@c_legacy_tag_struct_vtable_shim@@UBAPADJ_JPAUs_tag_block@@JPADJ@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(749, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(750, m_struct_vtable->format_proc!=NULL);
+    
+    return m_struct_vtable->format_proc(arg1, arg2, arg3, arg4, arg5, arg6);
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::on_new_thunk(void *) const
-//{
-//    mangled_ppc("?on_new_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NPAX@Z");
-//};
+bool c_legacy_tag_struct_vtable_shim::has_on_delete_proc(void) const
+{
+    mangled_ppc("?has_on_delete_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(757, m_struct_vtable);
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_copy_proc(void) const
-//{
-//    mangled_ppc("?has_on_copy_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+    return m_struct_vtable->delete_proc != NULL;
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::on_copy_thunk(void const *, void *) const
-//{
-//    mangled_ppc("?on_copy_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NPBXPAX@Z");
-//};
+void c_legacy_tag_struct_vtable_shim::on_delete_thunk(void * arg1) const
+{
+    mangled_ppc("?on_delete_thunk@c_legacy_tag_struct_vtable_shim@@UBAXPAX@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(764, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(765, m_struct_vtable->delete_proc!=NULL);
+    
+    return m_struct_vtable->delete_proc(arg1);
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_write_to_cache_file_proc(void) const
-//{
-//    mangled_ppc("?has_write_to_cache_file_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+bool c_legacy_tag_struct_vtable_shim::has_on_new_proc(void) const
+{
+    mangled_ppc("?has_on_new_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(772, m_struct_vtable);
 
-//public: virtual void c_legacy_tag_struct_vtable_shim::write_to_cache_file_thunk(long, struct s_tag_block *, struct s_cache_file_builder_stream_context const *, void **, void **) const
-//{
-//    mangled_ppc("?write_to_cache_file_thunk@c_legacy_tag_struct_vtable_shim@@UBAXJPAUs_tag_block@@PBUs_cache_file_builder_stream_context@@PAPAX2@Z");
-//};
+    return m_struct_vtable->new_proc != NULL;
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_definition(void) const
-//{
-//    mangled_ppc("?has_fixup_old_struct_definition@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+bool c_legacy_tag_struct_vtable_shim::on_new_thunk(void * arg1) const
+{
+    mangled_ppc("?on_new_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NPAX@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(779, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(780, m_struct_vtable->new_proc);
+    
+    return m_struct_vtable->new_proc(arg1);
+};
 
-//public: virtual struct s_tag_struct_definition * c_legacy_tag_struct_vtable_shim::get_fixup_source_definition_thunk(void) const
-//{
-//    mangled_ppc("?get_fixup_source_definition_thunk@c_legacy_tag_struct_vtable_shim@@UBAPAUs_tag_struct_definition@@XZ");
-//};
+bool c_legacy_tag_struct_vtable_shim::has_on_copy_proc(void) const
+{
+    mangled_ppc("?has_on_copy_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(787, m_struct_vtable);
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_proc(void) const
-//{
-//    mangled_ppc("?has_fixup_old_struct_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
-//};
+    return m_struct_vtable->copy_proc != NULL;
+};
 
-//public: virtual bool c_legacy_tag_struct_vtable_shim::fixup_old_struct_thunk(class c_basic_buffer<void> &, struct s_tag_struct_definition const *, class c_basic_buffer<void> &, struct s_tag_struct_definition const *, class c_tag_allocator *, bool) const
-//{
-//    mangled_ppc("?fixup_old_struct_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NAAV?$c_basic_buffer@X@@PBUs_tag_struct_definition@@01PAVc_tag_allocator@@_N@Z");
-//};
+bool c_legacy_tag_struct_vtable_shim::on_copy_thunk(void const * arg1, void * arg2) const
+{
+    mangled_ppc("?on_copy_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NPBXPAX@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(795, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(796, m_struct_vtable->copy_proc!=NULL);
+    
+    return m_struct_vtable->copy_proc(arg1, arg2);
+};
+
+bool c_legacy_tag_struct_vtable_shim::has_write_to_cache_file_proc(void) const
+{
+    mangled_ppc("?has_write_to_cache_file_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(803, m_struct_vtable);
+
+    return m_struct_vtable->write_to_cache_file_block != NULL;
+};
+
+void c_legacy_tag_struct_vtable_shim::write_to_cache_file_thunk(long arg1, s_tag_block * arg2, s_cache_file_builder_stream_context const * arg3, void ** arg4, void ** arg5) const
+{
+    mangled_ppc("?write_to_cache_file_thunk@c_legacy_tag_struct_vtable_shim@@UBAXJPAUs_tag_block@@PBUs_cache_file_builder_stream_context@@PAPAX2@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(814, m_struct_vtable);
+    assert_tag_debug_untracked_jul_11_2011(815, m_struct_vtable->write_to_cache_file_block);
+
+    return m_struct_vtable->write_to_cache_file_block(arg1, arg2, arg3, arg4, arg5);
+};
+
+bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_definition(void) const
+{
+    mangled_ppc("?has_fixup_old_struct_definition@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(822, m_manual_fixup);
+
+    return m_manual_fixup->from_struct_definition != NULL;
+};
+
+s_tag_struct_definition * c_legacy_tag_struct_vtable_shim::get_fixup_source_definition_thunk(void) const
+{
+    mangled_ppc("?get_fixup_source_definition_thunk@c_legacy_tag_struct_vtable_shim@@UBAPAUs_tag_struct_definition@@XZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(829, m_manual_fixup);
+    assert_tag_debug_untracked_jul_11_2011(830, m_manual_fixup->from_struct_definition);
+
+    return m_manual_fixup->from_struct_definition;
+};
+
+bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_proc(void) const
+{
+    mangled_ppc("?has_fixup_old_struct_proc@c_legacy_tag_struct_vtable_shim@@UBA_NXZ");
+    
+    assert_tag_debug_untracked_jul_11_2011(837, m_manual_fixup);
+
+    return m_manual_fixup->fixup_proc != NULL;
+}
+
+bool c_legacy_tag_struct_vtable_shim::fixup_old_struct_thunk(c_basic_buffer<void> & arg1, s_tag_struct_definition const * arg2, c_basic_buffer<void> & arg3, s_tag_struct_definition const * arg4, c_tag_allocator * arg5, bool arg6) const
+{
+    mangled_ppc("?fixup_old_struct_thunk@c_legacy_tag_struct_vtable_shim@@UBA_NAAV?$c_basic_buffer@X@@PBUs_tag_struct_definition@@01PAVc_tag_allocator@@_N@Z");
+    
+    assert_tag_debug_untracked_jul_11_2011(849, m_manual_fixup);
+    assert_tag_debug_untracked_jul_11_2011(850, m_manual_fixup->fixup_proc);
+
+    return m_manual_fixup->fixup_proc(arg1, arg2, arg3, arg4, arg5, arg6);
+};
 
 //public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_postprocess_proc(void) const
 //{
@@ -864,3 +791,159 @@
 //    mangled_ppc("??$_Equal@PBKPBKUforward_iterator_tag@std@@@std@@YA_NPBK00Uforward_iterator_tag@0@U_Range_checked_iterator_tag@0@@Z");
 //};
 
+/* ---------- private code */
+
+/* ---------- reverse engineering */
+
+// struct s_tag_struct_definition g_null_block_struct_definition; // "?g_null_block_struct_definition@@3Us_tag_struct_definition@@A"
+// struct s_tag_block_definition g_null_block; // "?g_null_block@@3Us_tag_block_definition@@A"
+// struct s_tag_reference_definition g_non_traversed_reference_definition; // "?g_non_traversed_reference_definition@@3Us_tag_reference_definition@@A"
+// struct s_block_index_custom_search_definition g_null_custom_search_block_reference; // "?g_null_custom_search_block_reference@@3Us_block_index_custom_search_definition@@A"
+// char const **g_tag_reference_definition_flags_strings; // "?g_tag_reference_definition_flags_strings@@3PAPBDA"
+// struct s_string_list_definition g_tag_reference_definition_flags; // "?g_tag_reference_definition_flags@@3Us_string_list_definition@@A"
+// class c_legacy_tag_struct_vtable_shim g_empty_tag_struct_legacy_vtable_shim; // "?g_empty_tag_struct_legacy_vtable_shim@@3Vc_legacy_tag_struct_vtable_shim@@A"
+// class c_tag_memory_attributes const k_read_only_tag_memory_attributes; // "?k_read_only_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
+// class c_tag_memory_attributes const k_read_write_tag_memory_attributes; // "?k_read_write_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
+// class c_tag_memory_attributes const k_physical_read_only_tag_memory_attributes; // "?k_physical_read_only_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
+// class c_tag_memory_attributes const k_physical_read_write_tag_memory_attributes; // "?k_physical_read_write_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
+// class c_tag_memory_attributes const k_physical_write_combined_tag_memory_attributes; // "?k_physical_write_combined_tag_memory_attributes@@3Vc_tag_memory_attributes@@B"
+
+// bool tag_persistent_identifiers_equal(struct s_tag_persistent_identifier const &, struct s_tag_persistent_identifier const &);
+// bool resolve_block_reference_to_null(long, struct s_tag_field const *, void const *, void const *, __int64, struct s_tag_block_resolve_custom_result *);
+// bool block_definition_can_match_nothing(struct s_tag_field const *, struct s_tag_block_definition const *);
+// struct s_tag_struct_definition declare_legacy_field_set(struct s_tag_field const *, char const *, long, long, long, bool (*)(unsigned long, struct s_tag_field const *, long, long, void *, struct s_tag_field const *, long, long, void *));
+// struct s_tag_struct_definition * get_mutable_legacy_ancestor_field_set(struct s_tag_struct_definition *);
+// struct s_tag_struct_definition const * get_legacy_field_set(struct s_tag_struct_definition const *, long);
+// void tag_persistent_identifier_create(struct s_tag_persistent_identifier *);
+// public: struct s_tag_field const * s_tag_struct_definition::get_fields(void) const;
+// public: void s_tag_struct_definition::set_fields(struct s_tag_field const *);
+// public: bool s_tag_struct_definition::owns_field(struct s_tag_field const *) const;
+// public: long s_tag_struct_definition::get_struct_size(void) const;
+// public: long s_tag_struct_definition::get_cache_file_struct_size(void) const;
+// public: long s_tag_struct_definition::get_alignment_bits(void) const;
+// public: char const * s_tag_struct_definition::get_size_string(void) const;
+// public: unsigned long s_tag_struct_definition::get_runtime_flags(void) const;
+// public: bool s_tag_struct_definition::is_built_from_disk(void) const;
+// public: struct byte_swap_definition * s_tag_struct_definition::get_byte_swap_definition(void) const;
+// public: __int64 s_tag_struct_definition::get_exploded_struct_size(void) const;
+// public: class c_tag_struct_vtable_interface const * s_tag_struct_definition::get_struct_vtable(void) const;
+// public: void const * s_tag_struct_definition::get_type_key(void) const;
+// public: struct s_tag_persistent_identifier const & s_tag_struct_definition::get_persistent_identifier(void) const;
+// public: struct s_tag_struct_definition const * s_tag_struct_definition::get_ancestor_definition(void) const;
+// public: struct s_tag_struct_definition * s_tag_struct_definition::get_ancestor_definition_mutable(void);
+// public: struct s_tag_struct_definition * s_tag_struct_definition::get_mutable_ancestor_definition(void);
+// public: struct s_tag_struct_definition const * s_tag_struct_definition::get_descendent_definition(void) const;
+// public: char const * s_tag_struct_definition::get_pretty_name(void) const;
+// public: char const * s_tag_struct_definition::get_name(void) const;
+// public: void s_tag_struct_definition::set_descendent_definition(struct s_tag_struct_definition *);
+// public: enum e_tag_memory_allocation_type s_tag_struct_definition::get_preferred_memory_type(void);
+// public: class c_tag_memory_attributes const & s_tag_struct_definition::get_memory_attributes(void) const;
+// public: void s_tag_struct_definition::validate_vtable(void);
+// public: long s_tag_block_definition::get_element_size(void) const;
+// public: char const * s_tag_block_definition::get_size_string(void) const;
+// public: struct s_tag_field const * s_tag_block_definition::get_fields(void) const;
+// public: long s_tag_block_definition::get_cache_file_element_size(void) const;
+// public: unsigned long s_tag_block_definition::get_runtime_flags(void) const;
+// public: bool s_tag_block_definition::does_not_exist_in_cache_build(void) const;
+// public: long s_tag_block_definition::get_alignment_bits(void) const;
+// public: struct byte_swap_definition * s_tag_block_definition::get_byte_swap_definition(void) const;
+// public: __int64 s_tag_block_definition::get_exploded_maximum_block_size(void) const;
+// public: class c_tag_struct_vtable_interface const * s_tag_block_definition::get_struct_vtable(void) const;
+// public: void const * s_tag_block_definition::get_type_key(void) const;
+// public: struct s_tag_persistent_identifier const & s_tag_block_definition::get_persistent_identifier(void) const;
+// public: char const * s_tag_block_definition::get_pretty_name(void) const;
+// public: char const * s_tag_block_definition::get_elements_name(void) const;
+// public: char const * s_tag_block_definition::get_block_name(void) const;
+// public: unsigned long s_tag_block_definition::get_allocation_flags(void) const;
+// public: enum e_tag_memory_allocation_type s_tag_block_definition::get_preferred_memory_type(void);
+// public: class c_tag_memory_attributes const & s_tag_block_definition::get_memory_attributes(void) const;
+// public: struct s_tag_field const * s_tag_array_definition::get_fields(void) const;
+// public: long s_tag_array_definition::get_element_size(void) const;
+// public: long s_tag_array_definition::get_cache_file_element_size(void) const;
+// public: unsigned long s_tag_array_definition::get_runtime_flags(void) const;
+// public: class c_tag_struct_vtable_interface const * s_tag_array_definition::get_struct_vtable(void) const;
+// public: void const * s_tag_array_definition::get_type_key(void) const;
+// public: struct s_tag_persistent_identifier const & s_tag_array_definition::get_persistent_identifier(void) const;
+// public: char const * s_tag_array_definition::get_pretty_name(void) const;
+// public: char const * s_tag_array_definition::get_elements_name(void) const;
+// public: char const * s_tag_array_definition::get_array_name(void) const;
+// public: enum e_tag_memory_allocation_type s_tag_array_definition::get_preferred_memory_type(void);
+// public: class c_tag_memory_attributes const & s_tag_array_definition::get_memory_attributes(void) const;
+// public: struct s_tag_field const * s_tag_resource_definition::get_fields(void) const;
+// public: long s_tag_resource_definition::get_alignment_bits(void) const;
+// public: long s_tag_resource_definition::get_resource_size(void) const;
+// public: long s_tag_resource_definition::get_cache_file_resource_size(void) const;
+// public: unsigned long s_tag_resource_definition::get_runtime_flags(void) const;
+// public: class c_tag_struct_vtable_interface const * s_tag_resource_definition::get_struct_vtable(void) const;
+// public: void const * s_tag_resource_definition::get_type_key(void) const;
+// public: long s_tag_resource_definition::get_pageable_alignment_bits(void) const;
+// public: long s_tag_resource_definition::get_optional_alignment_bits(void) const;
+// public: struct s_tag_persistent_identifier const & s_tag_resource_definition::get_persistent_identifier(void) const;
+// public: char const * s_tag_resource_definition::get_pretty_name(void) const;
+// public: char const * s_tag_resource_definition::get_resource_name(void) const;
+// public: char const * s_tag_resource_definition::get_elements_name(void) const;
+// public: bool s_tag_resource_definition::required(void) const;
+// public: bool s_tag_resource_definition::not_required_immediately(void) const;
+// public: bool s_tag_resource_definition::optional(void) const;
+// public: bool s_tag_resource_definition::streamed(void) const;
+// public: void s_tag_resource_definition::validate_vtable(void);
+// public: unsigned long s_tag_struct_definition::get_legacy_struct_tag(void) const;
+// public: long s_tag_struct_definition::get_legacy_version(void) const;
+// public: long s_tag_block_definition::get_legacy_version(void) const;
+// public: long s_tag_array_definition::get_legacy_version(void) const;
+// public: unsigned long s_tag_data_definition::get_allocation_flags(void) const;
+// public: class c_tag_memory_attributes s_tag_data_definition::get_memory_attributes(void) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_byte_swap_proc(void) const;
+// public: virtual void c_legacy_tag_struct_vtable_shim::byte_swap_block_proc(void *) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_postprocess_proc(void) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::postprocess_thunk(long, void *, bool) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_format_proc(void) const;
+// public: virtual char * c_legacy_tag_struct_vtable_shim::format_thunk(long, __int64, struct s_tag_block *, long, char *, long) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_delete_proc(void) const;
+// public: virtual void c_legacy_tag_struct_vtable_shim::on_delete_thunk(void *) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_new_proc(void) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::on_new_thunk(void *) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_on_copy_proc(void) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::on_copy_thunk(void const *, void *) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_write_to_cache_file_proc(void) const;
+// public: virtual void c_legacy_tag_struct_vtable_shim::write_to_cache_file_thunk(long, struct s_tag_block *, struct s_cache_file_builder_stream_context const *, void **, void **) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_definition(void) const;
+// public: virtual struct s_tag_struct_definition * c_legacy_tag_struct_vtable_shim::get_fixup_source_definition_thunk(void) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::has_fixup_old_struct_proc(void) const;
+// public: virtual bool c_legacy_tag_struct_vtable_shim::fixup_old_struct_thunk(class c_basic_buffer<void> &, struct s_tag_struct_definition const *, class c_basic_buffer<void> &, struct s_tag_struct_definition const *, class c_tag_allocator *, bool) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_postprocess_proc(void) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::postprocess_tag_thunk(long, bool) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_missing_tag_proc(void) const;
+// public: virtual void c_legacy_tag_group_vtable_shim::handle_missing_tag_thunk(unsigned long, char const *, unsigned long, unsigned long, char const *, long *) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_on_save_tag_proc(void) const;
+// public: virtual void c_legacy_tag_group_vtable_shim::on_save_tag_thunk(long) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_write_to_cache_file_proc(void) const;
+// public: virtual void c_legacy_tag_group_vtable_shim::write_tag_to_cache_file_thunk(long, unsigned long, class c_cache_file_scratch_allocator *, class c_cache_file_resource_library *, class c_cache_file_tracer *, void **, void **) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_valid_alternate_streams(void) const;
+// public: virtual struct s_tag_group_stream_list * c_legacy_tag_group_vtable_shim::get_alterante_streams_thunk(void) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_should_load_tag_stream_proc(void) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::should_load_tag_stream_thunk(unsigned long, bool) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_custom_xsync_runtime_platforms(void) const;
+// public: virtual unsigned long c_legacy_tag_group_vtable_shim::get_xsync_runtime_platforms_thunk(void) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::has_postprocess_on_sync_proc(void) const;
+// public: virtual bool c_legacy_tag_group_vtable_shim::postprocess_on_sync_thunk(long, enum e_runtime_platform_type, class c_cache_file_global_tag_registry *, bool) const;
+// public: unsigned long s_tag_group::get_xsync_version(void) const;
+// public: long s_tag_group::get_non_temporary_group_index(void) const;
+// public: void s_tag_group::set_non_temporary_group_index(long);
+// public: bool s_tag_group::valid_for_reload_stage(enum e_tag_reload_stage) const;
+// public: void s_tag_group::validate_vtable(void);
+// public: enum e_tag_memory_allocation_type c_tag_memory_attributes::get_memory_type(void) const;
+// public: unsigned long c_tag_memory_attributes::get_usage_flags(void) const;
+// public: void c_tag_memory_attributes::set_attributes(enum e_tag_memory_allocation_type, unsigned long);
+// public: bool c_tag_memory_attributes::operator==(class c_tag_memory_attributes const &) const;
+// public: bool c_tag_memory_attributes::operator!=(class c_tag_memory_attributes const &) const;
+// class c_tag_memory_attributes make_tag_memory_attributes(enum e_tag_memory_allocation_type, unsigned long);
+// public: bool c_flags_no_init<enum e_tag_memory_usage_bit, unsigned long, 6, struct s_default_enum_string_resolver>::operator==(class c_flags_no_init<enum e_tag_memory_usage_bit, unsigned long, 6, struct s_default_enum_string_resolver> const &) const;
+// unsigned long const * array_begin<unsigned long const, 4>(unsigned long const (&)[4]);
+// unsigned long const * array_end<unsigned long const, 4>(unsigned long const (&)[4]);
+// bool std::equal<unsigned long const *, unsigned long const *>(unsigned long const *, unsigned long const *, unsigned long const *);
+// unsigned long const * std::_Checked_base<unsigned long const *>(unsigned long const *&);
+// struct std::random_access_iterator_tag std::_Iter_random<unsigned long const *, unsigned long const *>(unsigned long const *const &, unsigned long const *const &);
+// bool std::_Equal<unsigned long const *, unsigned long const *>(unsigned long const *, unsigned long const *, unsigned long const *, struct std::random_access_iterator_tag, struct std::_Range_checked_iterator_tag);
+// unsigned long const * std::_Checked_base<unsigned long const *>(unsigned long const *&, struct std::_Unchanged_checked_iterator_base_type_tag);
+// bool std::_Equal<unsigned long const *, unsigned long const *, struct std::forward_iterator_tag>(unsigned long const *, unsigned long const *, unsigned long const *, struct std::forward_iterator_tag, struct std::_Range_checked_iterator_tag);
