@@ -274,22 +274,22 @@ void version_set_project(s_project_version const * version)
             " untracked");
     }
 
-    if ( g_project_version.unknownC && *g_project_version.unknownC )
+    if ( g_project_version.build_date && *g_project_version.build_date )
     {
         csnzappendf(
             version_globals.full_string,
             NUMBEROF(version_globals.full_string),
             " %s",
-            g_project_version.unknownC);
+            g_project_version.build_date);
     }
 
-    if ( g_project_version.unknown10 && *g_project_version.unknown10 )
+    if ( g_project_version.build_time && *g_project_version.build_time )
     {
         csnzappendf(
             version_globals.full_string,
             NUMBEROF(version_globals.full_string),
             " %s",
-            g_project_version.unknown10);
+            g_project_version.build_time);
     }
 };
 

@@ -13,8 +13,8 @@ struct s_project_version
   char const* build_string;
   char const* build_name;
   long build_number;
-  char const* unknownC; // $todo what is this? it's used in version_set_project
-  char const* unknown10; // $todo what is this? it's used in version_set_project
+  char const* build_date;
+  char const* build_time;
   char const* target_application;
   char const* target_variant;
   char const* target_configuration;
