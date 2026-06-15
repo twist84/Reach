@@ -57,10 +57,12 @@ bool game_in_editor(void)
     return false;
 };
 
-//bool game_in_editor_player_simulation(void)
-//{
-//    mangled_ppc("?game_in_editor_player_simulation@@YA_NXZ");
-//};
+bool game_in_editor_player_simulation(void)
+{
+    mangled_ppc("?game_in_editor_player_simulation@@YA_NXZ");
+
+    return false;
+};
 
 //bool editor_using_wpf_rendering(void)
 //{
