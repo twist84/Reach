@@ -64,10 +64,12 @@ bool game_in_editor_player_simulation(void)
     return false;
 };
 
-//bool editor_using_wpf_rendering(void)
-//{
-//    mangled_ppc("?editor_using_wpf_rendering@@YA_NXZ");
-//};
+bool editor_using_wpf_rendering(void)
+{
+    mangled_ppc("?editor_using_wpf_rendering@@YA_NXZ");
+
+    return false;
+};
 
 //bool editor_should_render_object(long)
 //{
