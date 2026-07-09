@@ -7,6 +7,7 @@
 /* ---------- constants */
 
 #define NUMBEROF(_array) (sizeof(_array) / sizeof(_array[0]))
+#define IN_RANGE_INCLUSIVE(value, begin, end) ((value) >= (begin) && (value) <= (end))
 
 /* ---------- definitions */
 

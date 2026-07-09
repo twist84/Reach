@@ -1,6 +1,8 @@
 /* ---------- headers */
 
 #include "omaha\simulation\simulation_entity_database.h"
+#include "omaha\simulation\game_interface\simulation_game_entities.h"
+#include "core\corelib\cseries\cseries_macros.h"
 
 /* ---------- constants */
 
@@ -209,10 +211,26 @@
 //    mangled_ppc("?entity_capture_creation_data@c_simulation_entity_database@@QAAXJ@Z");
 //};
 
-//bool simulation_entity_type_is_object(enum e_simulation_entity_type)
-//{
-//    mangled_ppc("?simulation_entity_type_is_object@@YA_NW4e_simulation_entity_type@@@Z");
-//};
+bool simulation_entity_type_is_object(enum e_simulation_entity_type entity_type)
+{
+    mangled_ppc("?simulation_entity_type_is_object@@YA_NW4e_simulation_entity_type@@@Z");
+    
+    bool entity_is_object = false;
+    switch (entity_type)
+    {
+        case _simulation_entity_type_unit:
+        case _simulation_entity_type_item:
+        case _simulation_entity_type_generic:
+        case _simulation_entity_type_generic_garbage:
+        case _simulation_entity_type_vehicle:
+        case _simulation_entity_type_projectile:
+        case _simulation_entity_type_weapon:
+        case _simulation_entity_type_device:
+            entity_is_object = true;
+            break;
+    }
+    return entity_is_object;
+};
 
 //public: void c_simulation_entity_database::entity_delete(long)
 //{
@@ -598,4 +616,3 @@
 //{
 //    mangled_ppc("?make_N_bit_mask_size_type@?$c_flags_no_init@J_K$0EA@Us_default_enum_string_resolver@@@@CA_KJ@Z");
 //};
-
