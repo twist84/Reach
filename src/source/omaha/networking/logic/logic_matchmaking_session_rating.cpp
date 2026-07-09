@@ -35,9 +35,3 @@
 //{
 //    mangled_ppc("?network_session_matchmaking_hopper_property_is_boolean@@YA_NW4e_online_property_id@@@Z");
 //};
-
-//double abs(double)
-//{
-//    mangled_ppc("?abs@@YANN@Z");
-//};
-

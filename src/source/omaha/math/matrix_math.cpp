@@ -1,7 +1,10 @@
+#define __FILE_TAG_DEBUG_UNTRACKED_JUL_11_2011__ "C:\\SD\\Reach\\Publishing\\Main\\shared\\engine\\source\\omaha\\math\\matrix_math.cpp"
 /* ---------- headers */
 
 #include "omaha\math\matrix_math.h"
 #include "omaha\math\real_math.h"
+#include "omaha\cseries\cseries.h"
+#include "core\corelib\cseries\cseries_asserts.h"
 
 /* ---------- constants */
 
@@ -353,10 +356,127 @@
 //    mangled_ppc("?linear_equation_solve_3x3@@YA_NQAY02$$CBNQBNQAN@Z");
 //};
 
-//bool linear_equation_solve_4x4(double const (*const)[4], double const *const, double *const)
-//{
-//    mangled_ppc("?linear_equation_solve_4x4@@YA_NQAY03$$CBNQBNQAN@Z");
-//};
+bool linear_equation_solve_4x4(double const (* const a)[4], double const* const b, double* const x)
+{
+    mangled_ppc("?linear_equation_solve_4x4@@YA_NQAY03$$CBNQBNQAN@Z");
+    
+	double x_pivot_row[5];
+	double y_pivot_row[4];
+	double z_pivot_row[3];
+	double final_row[2];
+	double y_reduced_rows[3][4];
+	long row_index;
+	long x_pivot;
+	long y_pivot;
+	long z_pivot;
+	long y_reduced_indices[3];
+	long z_reduced_indices[2];
+	double z_reduced_rows[2][3];
+
+	x_pivot = NONE;
+	{
+		double pivot_magnitude = 0.0;
+		for (row_index = 0; row_index < 4; row_index++)
+		{
+			double magnitude = abs(a[row_index][0]);
+			if (magnitude > pivot_magnitude)
+			{
+				pivot_magnitude = magnitude;
+				x_pivot = row_index;
+			}
+		}
+		if (pivot_magnitude < k_real_epsilon)
+		{
+			return false;
+		}
+	}
+	for (row_index = 0; row_index < 3; row_index++)
+	{
+		y_reduced_indices[row_index] = (x_pivot + row_index + 1) % 4;
+	}
+	x_pivot_row[0] = a[x_pivot][0];
+	x_pivot_row[1] = a[x_pivot][1] / x_pivot_row[0];
+	x_pivot_row[2] = a[x_pivot][2] / x_pivot_row[0];
+	x_pivot_row[3] = a[x_pivot][3] / x_pivot_row[0];
+	x_pivot_row[4] = b[x_pivot] / x_pivot_row[0];
+	for (row_index = 0; row_index < 3; row_index++)
+	{
+		long row = y_reduced_indices[row_index];
+		double multiplier = -a[row][0];
+		y_reduced_rows[row_index][0] = a[row][1] + multiplier * x_pivot_row[1];
+		y_reduced_rows[row_index][1] = a[row][2] + multiplier * x_pivot_row[2];
+		y_reduced_rows[row_index][2] = a[row][3] + multiplier * x_pivot_row[3];
+		y_reduced_rows[row_index][3] = b[row] + multiplier * x_pivot_row[4];
+	}
+	y_pivot = NONE;
+	{
+		double pivot_magnitude = 0.0;
+		for (row_index = 0; row_index < 3; row_index++)
+		{
+			double magnitude = abs(y_reduced_rows[row_index][0]);
+			if (magnitude > pivot_magnitude)
+			{
+				pivot_magnitude = magnitude;
+				y_pivot = row_index;
+			}
+		}
+		if (pivot_magnitude < k_real_epsilon)
+		{
+			return false;
+		}
+	}
+	for (row_index = 0; row_index < 2; row_index++)
+	{
+		z_reduced_indices[row_index] = (y_pivot + row_index + 1) % 3;
+	}
+	y_pivot_row[0] = y_reduced_rows[y_pivot][0];
+	y_pivot_row[1] = y_reduced_rows[y_pivot][1] / y_pivot_row[0];
+	y_pivot_row[2] = y_reduced_rows[y_pivot][2] / y_pivot_row[0];
+	y_pivot_row[3] = y_reduced_rows[y_pivot][3] / y_pivot_row[0];
+	for (row_index = 0; row_index < 2; row_index++)
+	{
+		long row = z_reduced_indices[row_index];
+		double multiplier = -y_reduced_rows[row][0];
+		z_reduced_rows[row_index][0] = y_reduced_rows[row][1] + multiplier * y_pivot_row[1];
+		z_reduced_rows[row_index][1] = y_reduced_rows[row][2] + multiplier * y_pivot_row[2];
+		z_reduced_rows[row_index][2] = y_reduced_rows[row][3] + multiplier * y_pivot_row[3];
+	}
+	z_pivot = abs(z_reduced_rows[1][0]) > abs(z_reduced_rows[0][0]);
+	if (abs(z_reduced_rows[z_pivot][0]) < k_real_epsilon)
+	{
+		return false;
+	}
+	z_pivot_row[0] = z_reduced_rows[z_pivot][0];
+	z_pivot_row[1] = z_reduced_rows[z_pivot][1] / z_pivot_row[0];
+	z_pivot_row[2] = z_reduced_rows[z_pivot][2] / z_pivot_row[0];
+	{
+		double multiplier = -z_reduced_rows[z_pivot == 0][0];
+		final_row[0] = z_reduced_rows[z_pivot == 0][1] + multiplier * z_pivot_row[1];
+		final_row[1] = z_reduced_rows[z_pivot == 0][2] + multiplier * z_pivot_row[2];
+	}
+	if (abs(final_row[0]) < k_real_epsilon)
+	{
+		return false;
+	}
+	x[3] = final_row[1] / final_row[0];
+	x[2] = z_pivot_row[2] - z_pivot_row[1] * x[3];
+	x[1] = y_pivot_row[3] - y_pivot_row[2] * x[3] - y_pivot_row[1] * x[2];
+	x[0] = x_pivot_row[4] - x_pivot_row[3] * x[3] - x_pivot_row[2] * x[2] - x_pivot_row[1] * x[1];
+	{
+		double x_prime[4];
+		real_vector4d solution_error;
+		x_prime[0] = a[0][0] * x[0] + a[0][1] * x[1] + a[0][2] * x[2] + a[0][3] * x[3];
+		x_prime[1] = a[1][0] * x[0] + a[1][1] * x[1] + a[1][2] * x[2] + a[1][3] * x[3];
+		x_prime[2] = a[2][0] * x[0] + a[2][1] * x[1] + a[2][2] * x[2] + a[2][3] * x[3];
+		x_prime[3] = a[3][0] * x[0] + a[3][1] * x[1] + a[3][2] * x[2] + a[3][3] * x[3];
+		solution_error.i = static_cast<float>(x_prime[0] - b[0]);
+		solution_error.j = static_cast<float>(x_prime[1] - b[1]);
+		solution_error.k = static_cast<float>(x_prime[2] - b[2]);
+		solution_error.l = static_cast<float>(x_prime[3] - b[3]);
+		assert_tag_debug_untracked_jul_11_2011(2360, magnitude4d(&solution_error) < k_real_epsilon);
+	}
+	return true;
+};
 
 //void prefetch<struct real_matrix4x3>(struct real_matrix4x3const *)
 //{

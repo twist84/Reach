@@ -6,6 +6,46 @@
 
 /* ---------- constants */
 
+#ifndef __FLT_EPSILON__
+#define __FLT_EPSILON__ 1.192092896e-07f // 0x34000000
+#endif
+#ifndef __FLT_MAX__
+#define __FLT_MAX__ 3.402823466e+38f // 0x7F7FFFFF
+#endif
+#ifndef __FLT_MIN__
+#define __FLT_MIN__ 1.175494351e-38f // 0x00800000
+#endif
+
+const float k_degrees_to_radians = 0.0174533f;
+const float k_radians_to_degrees = 57.2957802f;
+const float k_real_precision = __FLT_EPSILON__;
+const float k_pi = 3.1415927f;
+const float k_2pi = k_pi * 2.0f;
+const float k_3pi = k_pi * 3.0f;
+const float k_half_pi = k_pi / 2.0f;
+const float k_quarter_pi = k_pi / 4.0f;
+const float k_one_over_root2 = 0.7071068f;
+const float k_cosine30 = 0.8660254f;
+const float k_sine30 = 0.5f;
+const float k_cosine45 = 0.7071068f;
+const float k_sine45 = 0.7071068f;
+const float k_cosine60 = 0.5f;
+const float k_sine60 = 0.8660254f;
+const float k_full_circle = 6.2831855f;
+const float k_half_circle = 3.1415927f;
+const float k_quarter_circle = 1.5707964f;
+const float k_eighth_circle = 0.7853982f;
+const float k_real_epsilon = 0.0001f;
+const float k_valid_real_epsilon = 0.001f;
+const float k_double_epsilon = 0.000001f;
+const float k_root_5 = 2.236068f;
+const float k_golden_ratio = 1.618034f;
+const float k_one_over_golden_ratio = 0.618034f;
+const float k_real_min = -__FLT_MAX__;
+const float k_real_max = __FLT_MAX__;
+const float REAL_MIN = -__FLT_MAX__;
+const float REAL_MAX = __FLT_MAX__;
+
 /* ---------- definitions */
 
 typedef float real;
@@ -396,5 +436,13 @@ float magnitude4d(union vector4d const * v)
 
 	return square_root(magnitude_squared4d(v));
 };
+
+extern double abs(double d);
+/*double abs(double d)
+{
+    mangled_ppc("?abs@@YANN@Z");
+
+	return fabs(d);
+};*/
 
 #endif // __REAL_MATH_H__
