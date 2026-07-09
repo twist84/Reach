@@ -581,53 +581,7 @@
 //    mangled_ppc("??4D3DXVECTOR4@@QAAAAU0@ABU0@@Z");
 //};
 
-//float tangent(float)
-//{
-//    mangled_ppc("?tangent@@YAMM@Z");
-//};
-
-//union vector3d * set_real_vector3d(union vector3d *, float, float, float)
-//{
-//    mangled_ppc("?set_real_vector3d@@YAPATvector3d@@PAT1@MMM@Z");
-//};
-
-//union real_point3d * point_from_line3d(union real_point3d const *, union vector3d const *, float, union real_point3d *)
-//{
-//    mangled_ppc("?point_from_line3d@@YAPATreal_point3d@@PBT1@PBTvector3d@@MPAT1@@Z");
-//};
-
-//union vector3d * scale_vector3d(union vector3d const *, float, union vector3d *)
-//{
-//    mangled_ppc("?scale_vector3d@@YAPATvector3d@@PBT1@MPAT1@@Z");
-//};
-
-//float normalize3d(union vector3d *)
-//{
-//    mangled_ppc("?normalize3d@@YAMPATvector3d@@@Z");
-//};
-
-//float magnitude3d(union vector3d const *)
-//{
-//    mangled_ppc("?magnitude3d@@YAMPBTvector3d@@@Z");
-//};
-
-//float distance3d(union real_point3d const *, union real_point3d const *)
-//{
-//    mangled_ppc("?distance3d@@YAMPBTreal_point3d@@0@Z");
-//};
-
-//union vector3d * cross_product3d(union vector3d const *, union vector3d const *, union vector3d *)
-//{
-//    mangled_ppc("?cross_product3d@@YAPATvector3d@@PBT1@0PAT1@@Z");
-//};
-
-//union vector3d * negate_vector3d(union vector3d const *, union vector3d *)
-//{
-//    mangled_ppc("?negate_vector3d@@YAPATvector3d@@PBT1@PAT1@@Z");
-//};
-
 //public: c_lights_view::c_lights_view(void)
 //{
 //    mangled_ppc("??0c_lights_view@@QAA@XZ");
 //};
-

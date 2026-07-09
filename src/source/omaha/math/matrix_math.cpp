@@ -351,10 +351,100 @@
 //    mangled_ppc("?matrix3x3_inverse_transform_vector@@YAPATvector3d@@PBUmatrix3x3@@PBT1@PAT1@@Z");
 //};
 
-//bool linear_equation_solve_3x3(double const (*const)[3], double const *const, double *const)
-//{
-//    mangled_ppc("?linear_equation_solve_3x3@@YA_NQAY02$$CBNQBNQAN@Z");
-//};
+bool linear_equation_solve_3x3(double const (* const a)[3], double const* const b, double* const x)
+{
+	mangled_ppc("?linear_equation_solve_3x3@@YA_NQAY02$$CBNQBNQAN@Z");
+
+	long row_index;
+	long x_pivot;
+	long y_pivot;
+	long reduce_indices[2];
+	double x_pivot_row[4];
+	double y_pivot_row[3];
+	double final_row[2];
+	double reduced_rows[2][3];
+
+	if (abs(a[1][0]) > abs(a[2][0]))
+	{
+		if (abs(a[0][0]) > abs(a[1][0]))
+		{
+			x_pivot = 0;
+			reduce_indices[0] = 1;
+			reduce_indices[1] = 2;
+		}
+		else
+		{
+			x_pivot = 1;
+			reduce_indices[0] = 0;
+			reduce_indices[1] = 2;
+		}
+	}
+	else
+	{
+		if (abs(a[0][0]) > abs(a[2][0]))
+		{
+			x_pivot = 0;
+			reduce_indices[0] = 1;
+			reduce_indices[1] = 2;
+		}
+		else
+		{
+			x_pivot = 2;
+			reduce_indices[0] = 0;
+			reduce_indices[1] = 1;
+		}
+	}
+	if (abs(a[x_pivot][0]) < k_real_epsilon)
+	{
+		return false;
+	}
+	x_pivot_row[0] = a[x_pivot][0];
+	x_pivot_row[1] = a[x_pivot][1] / x_pivot_row[0];
+	x_pivot_row[2] = a[x_pivot][2] / x_pivot_row[0];
+	x_pivot_row[3] = b[x_pivot] / x_pivot_row[0];
+	for (row_index = 0; row_index < 2; row_index++)
+	{
+		long row = reduce_indices[row_index];
+		double multiplier = -a[row][0];
+		reduced_rows[row_index][0] = a[row][1] + multiplier * x_pivot_row[1];
+		reduced_rows[row_index][1] = a[row][2] + multiplier * x_pivot_row[2];
+		reduced_rows[row_index][2] = b[row] + multiplier * x_pivot_row[3];
+	}
+	y_pivot = abs(reduced_rows[1][0]) > abs(reduced_rows[0][0]);
+	if (abs(reduced_rows[y_pivot][0]) < k_real_epsilon)
+	{
+		return false;
+	}
+	y_pivot_row[0] = reduced_rows[y_pivot][0];
+	y_pivot_row[1] = reduced_rows[y_pivot][1] / y_pivot_row[0];
+	y_pivot_row[2] = reduced_rows[y_pivot][2] / y_pivot_row[0];
+	{
+		double multiplier = -reduced_rows[y_pivot == 0][0];
+		final_row[0] = reduced_rows[y_pivot == 0][1] + multiplier * y_pivot_row[1];
+		final_row[1] = reduced_rows[y_pivot == 0][2] + multiplier * y_pivot_row[2];
+	}
+	if (abs(final_row[0]) < k_real_epsilon)
+	{
+		return false;
+	}
+	x[2] = final_row[1] / final_row[0];
+	x[1] = y_pivot_row[2] - y_pivot_row[1] * x[2];
+	x[0] = x_pivot_row[3] - x_pivot_row[2] * x[2] - x_pivot_row[1] * x[1];
+	{
+		double x_prime[3];
+		real_vector3d solution_error;
+		x_prime[0] = a[0][0] * x[0] + a[0][1] * x[1] + a[0][2] * x[2];
+		x_prime[1] = a[1][0] * x[0] + a[1][1] * x[1] + a[1][2] * x[2];
+		x_prime[2] = a[2][0] * x[0] + a[2][1] * x[1] + a[2][2] * x[2];
+		solution_error.n[0] = static_cast<float>(x_prime[0] - b[0]);
+		solution_error.n[1] = static_cast<float>(x_prime[1] - b[1]);
+		solution_error.n[2] = static_cast<float>(x_prime[2] - b[2]);
+#ifdef _DEBUG
+		assert_tag_debug_untracked_jul_11_2011(2183, magnitude3d(&solution_error) < k_real_epsilon);
+#endif
+	}
+	return true;
+}
 
 bool linear_equation_solve_4x4(double const (* const a)[4], double const* const b, double* const x)
 {
