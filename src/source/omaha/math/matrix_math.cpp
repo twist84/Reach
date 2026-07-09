@@ -449,23 +449,23 @@ bool linear_equation_solve_3x3(double const (* const a)[3], double const* const 
 bool linear_equation_solve_4x4(double const (* const a)[4], double const* const b, double* const x)
 {
     mangled_ppc("?linear_equation_solve_4x4@@YA_NQAY03$$CBNQBNQAN@Z");
-    
-	double x_pivot_row[5];
-	double y_pivot_row[4];
-	double z_pivot_row[3];
-	double final_row[2];
-	double y_reduced_rows[3][4];
+
 	long row_index;
 	long x_pivot;
 	long y_pivot;
 	long z_pivot;
+	double x_pivot_row[5];
+	double y_pivot_row[4];
+	double z_pivot_row[3];
+	double final_row[2];
 	long y_reduced_indices[3];
 	long z_reduced_indices[2];
+	double y_reduced_rows[3][4];
 	double z_reduced_rows[2][3];
 
-	x_pivot = NONE;
 	{
 		double pivot_magnitude = 0.0;
+	    x_pivot = NONE;
 		for (row_index = 0; row_index < 4; row_index++)
 		{
 			double magnitude = abs(a[row_index][0]);
@@ -498,9 +498,9 @@ bool linear_equation_solve_4x4(double const (* const a)[4], double const* const 
 		y_reduced_rows[row_index][2] = a[row][3] + multiplier * x_pivot_row[3];
 		y_reduced_rows[row_index][3] = b[row] + multiplier * x_pivot_row[4];
 	}
-	y_pivot = NONE;
 	{
 		double pivot_magnitude = 0.0;
+	    y_pivot = NONE;
 		for (row_index = 0; row_index < 3; row_index++)
 		{
 			double magnitude = abs(y_reduced_rows[row_index][0]);
