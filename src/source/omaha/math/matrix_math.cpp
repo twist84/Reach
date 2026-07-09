@@ -1,6 +1,7 @@
 /* ---------- headers */
 
 #include "omaha\math\matrix_math.h"
+#include "omaha\math\real_math.h"
 
 /* ---------- constants */
 
@@ -366,14 +367,3 @@
 //{
 //    mangled_ppc("?XMVectorSinCos@@YAXPAU__vector4@@0U1@@Z");
 //};
-
-//float magnitude4d(union vector4d const *)
-//{
-//    mangled_ppc("?magnitude4d@@YAMPBTvector4d@@@Z");
-//};
-
-//float magnitude_squared4d(union vector4d const *)
-//{
-//    mangled_ppc("?magnitude_squared4d@@YAMPBTvector4d@@@Z");
-//};
-
